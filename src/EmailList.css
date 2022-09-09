@@ -1,0 +1,5 @@
+.emailList__settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
