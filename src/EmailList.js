@@ -8,6 +8,11 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
+import InboxIcon from "@mui/icons-material/Inbox";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import Section from "./Section.js";
+import EmailRow from "./EmailRow";
 
 function EmailList() {
   return (
@@ -37,6 +42,26 @@ function EmailList() {
             <KeyboardHideIcon />
           </IconButton>
         </div>
+      </div>
+      <div className="emailList__sections">
+        <Section Icon={InboxIcon} title="Primary" color="red" selected />
+        <Section Icon={LocalOfferIcon} title="Promotions" color="green" />
+        <Section Icon={PeopleAltIcon} title="Social" color="#098EBD" />
+      </div>
+
+      <div className="emailList__list">
+        <EmailRow
+          title="Twitch"
+          subject="Hello from Singapore"
+          description="This is a test"
+          time="10pm"
+        />
+        <EmailRow
+          title="Twitch"
+          subject="Hello"
+          description="This is another test. I am going to check if the text overflow works like what I expected."
+          time="9pm"
+        />
       </div>
     </div>
   );
