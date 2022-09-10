@@ -1,6 +1,6 @@
 import React from "react";
 import "./Mail.css";
-import { Icon, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MoveToInboxIcon from "@mui/icons-material/MoveToInbox";
@@ -71,6 +71,12 @@ function Mail() {
           <IconButton>
             <KeyboardHideIcon />
           </IconButton>
+        </div>
+      </div>
+
+      <div className="mail__body">
+        <div className="mail__bodyHeader">
+          <h2>Subject</h2>
         </div>
       </div>
     </div>
