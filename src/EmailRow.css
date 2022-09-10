@@ -41,6 +41,7 @@
   padding-right: 15px;
   font-size: 9px;
   font-weight: bold;
+  border: 1px solid red;
 }
 
 .emailRow__description {
