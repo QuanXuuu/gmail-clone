@@ -11,6 +11,9 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
 
 function Mail() {
   const history = useHistory();
@@ -55,7 +58,20 @@ function Mail() {
             <MoreVertIcon />
           </IconButton>
         </div>
-        <div className="mail__toolsRight"></div>
+
+        <div className="mail__toolsRight">
+          <IconButton>
+            <ChevronLeftIcon />
+          </IconButton>
+
+          <IconButton>
+            <ChevronRightIcon />
+          </IconButton>
+
+          <IconButton>
+            <KeyboardHideIcon />
+          </IconButton>
+        </div>
       </div>
     </div>
   );
