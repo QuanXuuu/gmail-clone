@@ -1,6 +1,6 @@
 import React from "react";
 import "./Mail.css";
-import { Icon, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MoveToInboxIcon from "@mui/icons-material/MoveToInbox";
@@ -11,6 +11,9 @@ import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import KeyboardHideIcon from "@mui/icons-material/KeyboardHide";
 
 function Mail() {
   const history = useHistory();
@@ -55,7 +58,26 @@ function Mail() {
             <MoreVertIcon />
           </IconButton>
         </div>
-        <div className="mail__toolsRight"></div>
+
+        <div className="mail__toolsRight">
+          <IconButton>
+            <ChevronLeftIcon />
+          </IconButton>
+
+          <IconButton>
+            <ChevronRightIcon />
+          </IconButton>
+
+          <IconButton>
+            <KeyboardHideIcon />
+          </IconButton>
+        </div>
+      </div>
+
+      <div className="mail__body">
+        <div className="mail__bodyHeader">
+          <h2>Subject</h2>
+        </div>
       </div>
     </div>
   );
