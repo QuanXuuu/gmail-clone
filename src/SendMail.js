@@ -5,7 +5,12 @@ import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 
 function SendMail() {
-  const { register, handleSubmit, watch, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -18,25 +23,21 @@ function SendMail() {
         <CloseIcon className="sendMail__close" />
       </div>
 
-      <form onSubmit={handleSubmit()}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <input
-          name="to"
           placeholder="To"
           type="text"
-          ref={register({ required: true })}
+          {...register("to", { required: true })}
         />
         <input
-          name="subject"
           placeholder="Subject"
           type="text"
-          ref={register({ required: true })}
+          {...register("subject", { required: true })}
         />
         <input
-          name="message"
           placeholder="Message..."
           type="text"
-          className="sendMail__message"
-          ref={register({ required: true })}
+          {...register("message", { required: true })}
         />
 
         <div className="sendMail__options">
