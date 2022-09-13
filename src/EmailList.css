@@ -22,8 +22,3 @@
   border-bottom: 1px solid whitesmoke;
   z-index: 999;
 }
-
-.emailList__list {
-  display: flex;
-  flex-direction: column;
-}

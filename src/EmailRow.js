@@ -28,8 +28,9 @@ function EmailRow({ id, title, subject, description, time }) {
           {subject}
           <span className="emailRow__description"> - {description}</span>
         </h4>
-        <p className="emailRow__time">{time}</p>
       </div>
+
+      <p className="emailRow__time">{time}</p>
     </div>
   );
 }
