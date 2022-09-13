@@ -12,8 +12,8 @@ function SendMail() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (formdata) => {
+    console.log(formdata);
   };
 
   return (
@@ -29,6 +29,9 @@ function SendMail() {
           type="text"
           {...register("to", { required: true })}
         />
+
+        {errors.to && <p className="sendMail__error">To is Required! </p>}
+
         <input
           placeholder="Subject"
           type="text"
