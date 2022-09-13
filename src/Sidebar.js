@@ -10,11 +10,20 @@ import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 import NearMeIcon from "@mui/icons-material/NearMe";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import { useDispatch } from "react-redux";
+import { openSendMessage } from "./features/mailSlice";
 
 function Sidebar() {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
-      <Button startIcon={<EditIcon />} className="sidebar__compose">
+      <Button
+        startIcon={<EditIcon />}
+        fontSize="large"
+        className="sidebar__compose"
+        onClick={() => dispatch(openSendMessage())}
+      >
         Compose
       </Button>
 
