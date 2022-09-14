@@ -33,7 +33,7 @@ function SendMail() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="To"
-          type="text"
+          type="email"
           {...register("to", { required: true })}
         />
         {errors.to && <p className="sendMail__error">To is Required! </p>}
