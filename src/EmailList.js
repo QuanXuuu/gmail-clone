@@ -59,7 +59,7 @@ function EmailList() {
         <EmailRow
           title="Twitch"
           subject="Hello"
-          description="This is another test. I am going to check if the text overflow works like what I expected."
+          description="This is another test."
           time="9pm"
         />
       </div>
